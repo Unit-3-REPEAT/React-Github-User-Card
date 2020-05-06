@@ -72,10 +72,10 @@ handleChanges = e => {
 fetchUser = e => {
   e.preventDefault();
     axios
-    .get(`https://api.github.com/${this.state.searchUser}`)
+    .get(`https://api.github.com/users/${this.state.searchUser}`)
     .then(res => {
       console.log(`fetch specific user response`, res)
-      this.setState({searchUser: res.data.name })
+      this.setState({myInfo: res.data })
 
     })
     .catch(err => console.log(err))
