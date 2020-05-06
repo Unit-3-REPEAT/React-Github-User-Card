@@ -12,6 +12,7 @@ render () {
         <h3>Name: {this.props.myInfo.login}</h3>
         <p>Bio: {this.props.myInfo.bio}</p>
         <p>Location: {this.props.myInfo.location}</p>
+        <p>Gihub page: <a href={this.props.myInfo.html_url}><button>CLICK HERE</button></a></p>
         <img className="main-img" src={this.props.myInfo.avatar_url} alt="Gihub profile"></img>
     </div>
   );
